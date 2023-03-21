@@ -1,9 +1,8 @@
 :root {
   --color: rgba(2, 137, 150, 0.867);
-  --shadow:   0 0 20px rgba(2, 146, 159, 1),
-  0 0 40px rgba(2, 146, 159, 1),
-  0 0 60px rgba(2, 146, 159, 1),
-  0 0 80px rgba(2, 146, 159, 1);
+  --shadow: 0 0 20px rgba(2, 137, 150, 0.867), 0 0 40px rgba(2, 137, 150, 0.867), 0 0 60px rgba(2, 137, 150, 0.867), 0 0 80px rgba(2, 137, 150, 0.867);
+  --trans: translate(-50%, -50%);
+  --keyFClr: rgba(2, 146, 159, .1); 
 }
 
 body {
@@ -16,18 +15,15 @@ body {
   position: absolute;
   top: 50%;
   left:50%;
-  transform: translate(-50%, -50%);
+  transform: var(--trans);
   width: 22px;
   height: 22px;
-  background: rgb(0, 125, 139);
+  background:var(--color);
+  border: dotted 5px var(--color);
   border-radius: 50%;
   box-shadow: var(--shadow);
-  /* 0 0 20px rgba(2, 146, 159, 1),
-              0 0 40px rgba(2, 146, 159, 1),
-              0 0 60px rgba(2, 146, 159, 1),
-              0 0 80px rgba(2, 146, 159, 1); */
   animation: bang 2.22s;
-  transition: 2.5s;
+  transition: 2s;
 }
 
 
@@ -35,14 +31,15 @@ body {
   position: absolute;
   top: 55%;
   left:53%;
-  transform: translate(-50%, -50%);
+  transform: var(--trans);
   width: 22px;
   height: 22px;
-  background: rgb(0, 125, 139);
+  background:var(--color);
+  border: dotted 5px var(--color);
   border-radius: 50%;
   box-shadow: var(--shadow);
   animation: bang 2.22s;
-  transition: 2.5s;
+  transition: 2.1s;
 }
 
 
@@ -50,24 +47,25 @@ body {
   position: absolute;
   top: 55%;
   left:47%;
-  transform: translate(-50%, -50%);
+  transform: var(--trans);
   width: 22px;
   height: 22px;
-  background: rgb(0, 125, 139);
+  background:var(--color);
+  border: dotted 5px var(--color);
   border-radius: 50%;
   box-shadow: var(--shadow);
   animation: bang 2.22s;
-  transition: 2.5s;
+  transition: 2.2s;
 }
 
 @keyframes bang {
   to {
-    box-shadow: 0 0 0 30px rgba(2, 146, 159, .1),
-    0 0 0 60px rgba(2, 146, 159, .1),
-    0 0 0 120px rgba(2, 146, 159, .1),
-    0 0 0 240px rgba(2, 146, 159, .1),
-    0 0 0 480px rgba(2, 146, 159, .1),
-    0 0 0 960px rgba(2, 146, 159, .1);
+    box-shadow: 0 0 0 30px var(--keyFClr),
+    0 0 0 60px var(--keyFClr),
+    0 0 0 120px var(--keyFClr),
+    0 0 0 240px var(--keyFClr),
+    0 0 0 480px var(--keyFClr),
+    0 0 0 960px var(--keyFClr);
   };
 }
 
