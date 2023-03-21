@@ -11,10 +11,8 @@ body {
   background-color: rgba(122, 122, 122, 0.804);
 }
 
-.bang {
+.bang, .bang-2, .bang-3 {
   position: absolute;
-  top: 50%;
-  left:50%;
   transform: var(--trans);
   width: 22px;
   height: 22px;
@@ -23,38 +21,25 @@ body {
   border-radius: 50%;
   box-shadow: var(--shadow);
   animation: bang 2.22s;
+}
+
+.bang {
+  top: 50%;
+  left:50%;
   transition: 2s;
 }
 
-
 .bang-2 {
-  position: absolute;
+
   top: 55%;
   left:53%;
-  transform: var(--trans);
-  width: 22px;
-  height: 22px;
-  background:var(--color);
-  border: dotted 5px var(--color);
-  border-radius: 50%;
-  box-shadow: var(--shadow);
-  animation: bang 2.22s;
   transition: 2.1s;
 }
 
-
 .bang-3 {
-  position: absolute;
+
   top: 55%;
   left:47%;
-  transform: var(--trans);
-  width: 22px;
-  height: 22px;
-  background:var(--color);
-  border: dotted 5px var(--color);
-  border-radius: 50%;
-  box-shadow: var(--shadow);
-  animation: bang 2.22s;
   transition: 2.2s;
 }
 
