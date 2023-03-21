@@ -1,0 +1,81 @@
+:root {
+  --color: rgba(2, 137, 150, 0.867);
+  --shadow:   0 0 20px rgba(2, 146, 159, 1),
+  0 0 40px rgba(2, 146, 159, 1),
+  0 0 60px rgba(2, 146, 159, 1),
+  0 0 80px rgba(2, 146, 159, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(122, 122, 122, 0.804);
+}
+
+.bang {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  background: rgb(0, 125, 139);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  /* 0 0 20px rgba(2, 146, 159, 1),
+              0 0 40px rgba(2, 146, 159, 1),
+              0 0 60px rgba(2, 146, 159, 1),
+              0 0 80px rgba(2, 146, 159, 1); */
+  animation: bang 2.22s;
+  transition: 2.5s;
+}
+
+
+.bang-2 {
+  position: absolute;
+  top: 55%;
+  left:53%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  background: rgb(0, 125, 139);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  animation: bang 2.22s;
+  transition: 2.5s;
+}
+
+
+.bang-3 {
+  position: absolute;
+  top: 55%;
+  left:47%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  background: rgb(0, 125, 139);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  animation: bang 2.22s;
+  transition: 2.5s;
+}
+
+@keyframes bang {
+  to {
+    box-shadow: 0 0 0 30px rgba(2, 146, 159, .1),
+    0 0 0 60px rgba(2, 146, 159, .1),
+    0 0 0 120px rgba(2, 146, 159, .1),
+    0 0 0 240px rgba(2, 146, 159, .1),
+    0 0 0 480px rgba(2, 146, 159, .1),
+    0 0 0 960px rgba(2, 146, 159, .1);
+  };
+}
+
+/* .bang:hover {
+  box-shadow: 0 0 0 30px rgba(2, 146, 159, .1),
+              0 0 0 60px rgba(2, 146, 159, .1),
+              0 0 0 120px rgba(2, 146, 159, .1),
+              0 0 0 240px rgba(2, 146, 159, .1),
+              0 0 0 480px rgba(2, 146, 159, .1),
+              0 0 0 960px rgba(2, 146, 159, .1);
+} */
