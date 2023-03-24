@@ -1,8 +1,9 @@
 :root {
-  --color: rgba(2, 137, 150, 0.867);
+  --color: rgba(5, 203, 233, 0.867);
   --shadow: 0 0 20px rgba(2, 137, 150, 0.867), 0 0 40px rgba(2, 137, 150, 0.867), 0 0 60px rgba(2, 137, 150, 0.867), 0 0 80px rgba(2, 137, 150, 0.867);
   --trans: translate(-50%, -50%);
   --keyFClr: rgba(2, 146, 159, .1); 
+  --bounceSpeed: 1s;
 }
 
 body {
@@ -11,14 +12,33 @@ body {
   background-color: rgba(122, 122, 122, 0.804);
 }
 
+.container {
+  height: 19em;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: orbyBounce var(--bounceSpeed) infinite ease-in-out;
+  /* sceneRotate var(--speed);  */
+  animation-iteration-count: 2;
+}
+
+@keyframes orbyBounce {
+  0%, 100% {bottom: 1em;} 50% {bottom: 3em; animation-timing-function: ease-in;}  
+}
+
 .bang, .bang-2, .bang-3 {
   position: absolute;
   transform: var(--trans);
   width: 22px;
   height: 22px;
   background:var(--color);
-  border: dotted 5px var(--color);
+  /* border: dotted 5px var(--color); */
   border-radius: 50%;
+  background-image: radial-gradient(
+    circle at top,
+    lightblue,
+    30%,
+    black
+  );
   box-shadow: var(--shadow);
   animation: bang 2.22s;
 }
@@ -30,14 +50,12 @@ body {
 }
 
 .bang-2 {
-
   top: 55%;
   left:53%;
   transition: 2.1s;
 }
 
 .bang-3 {
-
   top: 55%;
   left:47%;
   transition: 2.2s;
